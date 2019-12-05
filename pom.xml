@@ -7,8 +7,8 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<boot.version>2.1.10.RELEASE</boot.version>
-		<reactor.version>3.2.2.RELEASE</reactor.version>
+		<boot.version>2.2.1.RELEASE</boot.version>
+		<reactor.version>3.3.1.RELEASE</reactor.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
