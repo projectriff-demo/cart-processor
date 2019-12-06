@@ -65,6 +65,7 @@ public class CartProcessor implements Function<Tuple2<Flux<CartEvent>, Flux<Chec
 		OrderEvent order = new OrderEvent();
 		order.setUser(e.getUser());
 		order.setProducts(carts.get(e.getUser()));
+		carts.put(e.getUser(), new HashMap<String, Integer>());
 		return order;
 	}
 }
