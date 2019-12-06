@@ -43,8 +43,21 @@ public class CartProcessor implements Function<Tuple2<Flux<CartEvent>, Flux<Chec
 
 	private void updateCart(CartEvent e) {
 		carts.putIfAbsent(e.getUser(), new HashMap<String, Integer>());
-		carts.get(e.getUser()).put(e.getProduct(), e.getQuantity());
-		logger.info("updated cart for " + e.getUser() + ": " + e.getProduct() + "=" + e.getQuantity());
+		Integer quantity = carts.get(e.getUser()).get(e.getProduct());
+		if (quantity == null) {
+			if ("add".equals(e.getAction())) {
+				carts.get(e.getUser()).put(e.getProduct(), e.getQuantity());
+			} else {
+				carts.get(e.getUser()).put(e.getProduct(), 0);
+			}
+		} else {
+			if ("add".equals(e.getAction())) {
+				carts.get(e.getUser()).put(e.getProduct(), quantity + e.getQuantity());
+			} else {
+				carts.get(e.getUser()).put(e.getProduct(), quantity - e.getQuantity());
+			}
+		}
+		logger.info("updated cart for " + e.getUser() + ": " + e.getProduct() + " " + e.getAction() + " " + e.getQuantity());
 	}
 
 	private OrderEvent checkout(CheckoutEvent e) {

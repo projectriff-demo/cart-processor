@@ -22,6 +22,8 @@ public class CartEvent {
 
     private String product;
 
+    private String action;
+
     private int quantity;
 
     public String getUser() {
@@ -38,6 +40,14 @@ public class CartEvent {
 
     public void setProduct(String product) {
         this.product = product;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
     }
 
     public int getQuantity() {
