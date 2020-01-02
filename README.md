@@ -1,5 +1,8 @@
 # Cart Processor
 
+![Build status](https://github.com/projectriff-demo/cart-processor/workflows/CI/badge.svg)
+
+
 Build the Function:
 
 ```
