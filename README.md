@@ -8,6 +8,7 @@ Build the Function:
 ```
 riff function create cart \
   --git-repo https://github.com/projectriff-demo/cart-processor \
+  --handler io.projectriff.cartprocessor.CartProcessor \
   --tail
 ```
 
