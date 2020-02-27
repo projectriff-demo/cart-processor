@@ -2,6 +2,7 @@
 
 ![Build status](https://github.com/projectriff-demo/cart-processor/workflows/CI/badge.svg)
 
+## Build and Deploy with riff
 
 Build the Function:
 
