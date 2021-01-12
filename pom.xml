@@ -8,7 +8,7 @@
 
 	<properties>
 		<boot.version>2.3.4.RELEASE</boot.version>
-		<reactor.version>3.3.4.RELEASE</reactor.version>
+		<reactor.version>3.4.2</reactor.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
